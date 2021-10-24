@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btnGo = findViewById(R.id.btnGO);;
+        Button btnGo = findViewById(R.id.btnGo);;
 
         txtAdress = findViewById(R.id.txtAddress);
         webView = findViewById(R.id.webview);
@@ -28,12 +28,11 @@ public class MainActivity extends AppCompatActivity {
            txtAdress.setText( getIntent().getData().toString());
             webView.loadUrl( getIntent().getData().toString());
         }
-        //btnGo
 
         btnGo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                webView.loadUrl("https://" + txtAdress.getText());
+                webView.loadUrl("http://" + txtAdress.getText());
             }
         });
     }
